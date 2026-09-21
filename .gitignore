@@ -1,0 +1,29 @@
+# Node
+node_modules/
+.next/
+out/
+dist/
+*.tsbuildinfo
+
+# Env
+.env
+.env.local
+backend/.env
+
+# Python (backend)
+backend/venv/
+**/__pycache__/
+*.pyc
+backend/storage/uploads/*
+!backend/storage/uploads/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log

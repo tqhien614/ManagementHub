@@ -1,0 +1,12 @@
+fastapi[standard]>=0.115
+sqlmodel>=0.0.22
+psycopg[binary]>=3.2
+pgvector>=0.3
+python-multipart
+pydantic-settings
+passlib[bcrypt]>=1.7
+bcrypt>=4.0,<5
+python-jose[cryptography]>=3.3
+aiofiles
+httpx
+email-validator
