@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useRouter } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { setToken, type User } from "@/lib/api";
 
 export function GlobalHeader({ user, unread }: { user: User | null; unread: number }) {

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getMe, request, setToken, type User } from "@/lib/api";
 import { GlobalHeader } from "@/components/GlobalHeader";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -29,7 +30,9 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col">
       <GlobalHeader user={user} unread={unread} />
-      <div className="flex-1 flex overflow-hidden">{children}</div>
+      <div className="flex-1 flex overflow-hidden">
+        <ErrorBoundary>{children}</ErrorBoundary>
+      </div>
     </div>
   );
 }
